@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { refreshAccessToken } from '@/lib/auth';
 import prisma from '@/lib/prisma';
 
+export const dynamic = 'force-dynamic';
+
 // 上报 Agent Memory 事件
 export async function POST(request: NextRequest) {
   try {

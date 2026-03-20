@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { refreshAccessToken } from'@/lib/auth';
 import prisma from '@/lib/prisma';
 
+export const dynamic = 'force-dynamic';
+
 // 添加笔记 API
 export async function POST(request: NextRequest) {
   try {
