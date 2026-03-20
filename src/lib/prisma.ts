@@ -1,7 +1,9 @@
 import { PrismaClient } from '@prisma/client'
 
 const prismaClientSingleton = () => {
-  return new PrismaClient()
+  return new PrismaClient({
+    accelerateUrl: process.env.ACCELERATE_URL,
+  })
 }
 
 type PrismaClientSingleton = ReturnType<typeof prismaClientSingleton>
